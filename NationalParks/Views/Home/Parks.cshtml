@@ -1,0 +1,21 @@
+﻿@model NationalParks.Models.Parks
+
+<h1>Drug</h1>
+<hr />
+
+@foreach (var item in Model.results)
+{
+    foreach (var drug in item.drug)
+    {
+        <div>
+            <h3>
+                @Html.DisplayFor(modelItem => drug.route)
+            </h3>
+        </div>
+    }
+
+}
+
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
